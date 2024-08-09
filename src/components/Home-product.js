@@ -1,0 +1,68 @@
+const Homeproduct =
+[
+    {
+        id: 1,
+        Name: 'Green Apple',
+        price: '14.99',
+        image: 'assets/apple.svg',
+        cat: '',
+        type: 'new',
+    },
+    {
+        id: 2,
+        Name: 'Fresh Indian Malta',
+        price: '14.99',
+        image: 'assets/orange.svg',
+        cat: '',
+        type: 'new',
+    },
+    {
+        id: 3,
+        Name: 'Green Lettuce',
+        price: '14.99',
+        image: 'assets/lettuce.svg',
+        cat: '',
+        type: 'new',
+    },
+    {
+        id: 4,
+        Name: 'Big Potatoes',
+        price: '14.99',
+        image: 'assets/potatoe.svg',
+        cat: '',
+        type: 'new',
+    },
+    {
+        id: 5,
+        Name: 'Corn',
+        price: '14.99',
+        image: 'assets/corn.svg',
+        cat: '',
+        type: 'new',
+    },
+    {
+        id: 6,
+        Name: 'Fresh Cauliflower',
+        price: '14.99',
+        image: 'assets/cauliflower.svg',
+        cat: '',
+        type: 'new',
+    },
+    {
+        id: 7,
+        Name: 'Green Capsicum',
+        price: '14.99',
+        image: 'assets/green pepper.svg',
+        cat: '',
+        type: 'new',
+    },
+    {
+        id: 8,
+        Name: 'Green Chili',
+        price: '14.99',
+        image: 'assets/green chili.svg',
+        cat: '',
+        type: 'new',
+    },
+]
+export default Homeproduct
