@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './components/Navbar'
 import Homepage from './pages/Homepage';
+import ProductPage from './pages/ProductPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
       <Navbar/>
       <Routes>
         <Route path="/" element={<Homepage addToCart={addToCart} />} />
+        <Route path="/pages/ProductPage" element={<ProductPage addToCart={addToCart} />} />
       </Routes>
     </Router>
   )

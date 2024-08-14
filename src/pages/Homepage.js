@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ChatbotToggle from '../components/ChatbotToggle';
 import Homeproduct from '../components/Home-product';
 import { GoArrowRight } from "react-icons/go";
-import { GoTag } from "react-icons/go";
-import { HiOutlineUser } from "react-icons/hi";
-import { BiMessageAlt } from "react-icons/bi";
-import { IoHeart } from "react-icons/io5";
 import LikeButton from '../components/LikedButton';
 import StarRating from '../components/StarRating';
+import Footer from '../components/Footer';
 import ColumnSlideScroll from "../components/ColumnSlideScroll";
+// import ProductPage from "../components/productPage";
 import '../styles/HomePage.css';
 
 const Homepage = () => {
@@ -21,25 +20,25 @@ const Homepage = () => {
   };
 
   const boxes = [
-    { id: 1, img: 'assets/fruits.svg', label: 'Fresh Fruit' },
-    { id: 2, img: 'assets/veggies.svg', label: 'Fresh Vegetables' },
-    { id: 3, img: 'assets/meat n fish.svg', label: 'Meat & Fish' },
-    { id: 4, img: 'assets/snacks.svg', label: 'Snacks' },
-    { id: 5, img: 'assets/beverages.svg', label: 'Beverages' },
-    { id: 6, img: 'assets/beauty.svg', label: 'Beauty & Health' },
-    { id: 7, img: 'assets/bread.svg', label: 'Bread & Bakery' },
-    { id: 8, img: 'assets/baking.svg', label: 'Baking Needs' },
-    { id: 9, img: 'assets/cooking.svg', label: 'Cooking' },
-    { id: 10, img: 'assets/diabetes.svg', label: 'Diabetic Food' },
-    { id: 11, img: 'assets/dish detergents.svg', label: 'Dish Detergents' },
-    { id: 12, img: 'assets/oil.svg', label: 'Oil' }
+    { id: 1, img: 'assets/fruits.svg', label: 'Fresh Fruit', path: '/pages/ProductPage' },
+    { id: 2, img: 'assets/veggies.svg', label: 'Fresh Vegetables', path: '/pages/ProductPage' },
+    { id: 3, img: 'assets/meat n fish.svg', label: 'Meat & Fish', path: '/pages/ProductPage' },
+    { id: 4, img: 'assets/snacks.svg', label: 'Snacks', path: '/pages/ProductPage'},
+    { id: 5, img: 'assets/beverages.svg', label: 'Beverages', path: '/pages/ProductPage'},
+    { id: 6, img: 'assets/beauty.svg', label: 'Beauty & Health', path: '/pages/ProductPage'},
+    { id: 7, img: 'assets/bread.svg', label: 'Bread & Bakery', path: '/pages/ProductPage'},
+    { id: 8, img: 'assets/baking.svg', label: 'Baking Needs', path: '/pages/ProductPage'},
+    { id: 9, img: 'assets/cooking.svg', label: 'Cooking', path: '/pages/ProductPage'},
+    { id: 10, img: 'assets/diabetes.svg', label: 'Diabetic Food', path: '/pages/ProductPage'},
+    { id: 11, img: 'assets/dish detergents.svg', label: 'Dish Detergents', path: '/pages/ProductPage'},
+    { id: 12, img: 'assets/oil.svg', label: 'Oil',path: '/pages/ProductPage' }
   ];
 
-  const foodBox = [
-    { id: 1, img: 'assets/spaghetti.svg', label: 'The ultimate guide to spaghetti: a delicious journey you should try with families.' },
-    { id: 2, img: 'assets/chicken.svg', label: 'Chicken, the most consumed protein globally, is a staple in many cuisines.' },
-    { id: 3, img: 'assets/burger.svg', label: 'Burger, the quintessential comfort food, have captured the hearts of many.' }
-  ];
+  // const foodBox = [
+  //   { id: 1, img: 'assets/spaghetti.svg', label: 'The ultimate guide to spaghetti: a delicious journey you should try with families.' },
+  //   { id: 2, img: 'assets/chicken.svg', label: 'Chicken, the most consumed protein globally, is a staple in many cuisines.' },
+  //   { id: 3, img: 'assets/burger.svg', label: 'Burger, the quintessential comfort food, have captured the hearts of many.' }
+  // ];
 
 
 
@@ -79,27 +78,29 @@ const Homepage = () => {
           <div className='category'>
             <div className='box-1'>
               {boxes.slice(0, 6).map(box => (
-                <div
-                  key={box.id}
-                  className={`box ${clickedBox === box.id ? 'clicked' : ''}`}
-                  onClick={() => handleBoxClick(box.id)}
-                >
-                  <img src={box.img} alt={box.label}></img>
-                  <p>{box.label}</p>
-                </div>
+                <Link to={`/pages/ProductPage`} key={box.id} className='link1'>
+                  <div
+                    className={`box ${clickedBox === box.id ? 'clicked' : ''}`}
+                    onClick={() => handleBoxClick(box.id)}
+                  >
+                    <img src={box.img} alt={box.label}></img>
+                    <p>{box.label}</p>
+                  </div>
+                </Link>
               ))}
             </div>
             <br />
             <div className='box-1'>
               {boxes.slice(6).map(box => (
-                <div
-                  key={box.id}
-                  className={`box ${clickedBox === box.id ? 'clicked' : ''}`}
-                  onClick={() => handleBoxClick(box.id)}
-                >
-                  <img src={box.img} alt={box.label}></img>
-                  <p>{box.label}</p>
-                </div>
+                <Link to={`/pages/ProductPage`} key={box.id} className='link1'>
+                  <div
+                    className={`box ${clickedBox === box.id ? 'clicked' : ''}`}
+                    onClick={() => handleBoxClick(box.id)}
+                  >
+                    <img src={box.img} alt={box.label}></img>
+                    <p>{box.label}</p>
+                  </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -140,7 +141,7 @@ const Homepage = () => {
             }
           </div>
         </div>
-        <div className='news'>
+        {/* <div className='news'>
           <h2>Latest News</h2>
           <p className='news'>
             Get latest news from our bloggers, in other to try out new dishes <br />
@@ -171,14 +172,14 @@ const Homepage = () => {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
         <div className='points-field'>
           <h1>Why Choose Us?</h1>
           <div className='points'>
             <div className='point-container-1'>
               <div className='point-1'>
                 <div className='img'>
-                  <img src='assets/premium quality.svg'></img>
+                  <img src='assets/premium quality.svg' alt='premium quality'></img>
                 </div>
                 <h2>Premium Quality</h2>
                 <p>
@@ -191,7 +192,7 @@ const Homepage = () => {
               </div>
               <div className='point-1'>
                 <div className='img'>
-                  <img src='assets/best price.svg'></img>
+                  <img src='assets/best price.svg' alt='best price'></img>
                 </div>
                 <h2>Best Price</h2>
                 <p>
@@ -204,12 +205,12 @@ const Homepage = () => {
               </div>
             </div>  
             <div className='snacks'>
-              <img src='assets/snacks2.svg'></img>
+              <img src='assets/snacks2.svg' alt='snacks2'></img>
             </div>
             <div className='point-container-1'>
               <div className='point-1'>
                 <div className='img'>
-                  <img src='assets/service.svg'></img>
+                  <img src='assets/service.svg' alt='service'></img>
                 </div>
                 <h2>24/7 Service</h2>
                 <p>
@@ -222,7 +223,7 @@ const Homepage = () => {
               </div>
               <div className='point-1'>
                 <div className='img'>
-                  <img src='assets/natural.svg'></img>
+                  <img src='assets/natural.svg' alt='natural'></img>
                 </div>
                 <h2>100% Natural</h2>
                 <p>
@@ -237,6 +238,8 @@ const Homepage = () => {
           </div>
         </div>
         <ColumnSlideScroll />
+
+        <Footer/>
       </div>
     </>
   );

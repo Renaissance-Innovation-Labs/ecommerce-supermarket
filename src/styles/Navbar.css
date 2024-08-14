@@ -43,7 +43,7 @@
     justify-content: space-between;
     /* position: fixed;
     z-index: 20; */
-    background: #fff;
+    background: transparent;
     /* box-shadow: 0 10px 10px rgba(0, 0, 0, 0.06); */
 }
 .header .mid-header .logo img{
@@ -145,4 +145,197 @@
 }
 .search-box-1::placeholder{
     color: #6B6B6B;
+}
+.links .dropdown {
+    position: absolute;
+    right: 25%;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    /* width: 700px; */
+    /* height: 616px; */
+    border-radius: 10px;
+    padding: 20px;
+    /* gap: 10px; */
+    padding-bottom: 30px;
+}
+.links .dropdown .all{
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+}
+.links .dropdown .left .right .fruits {
+    padding: 8px 16px;
+}
+
+.links .dropdown  .left .right .fruits {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.links .dropdown li a:hover {
+    background-color: #f1f1f1;
+}
+.links .dropdown .all a{
+    font-size: 24px;
+}
+.links .dropdown .left .fruits{
+    display: flex;
+    flex-direction: row;
+}
+.links .dropdown .right .fruits{
+    display: flex;
+    flex-direction: row;
+}
+.links .dropdown .left .fruit2{
+    display: flex;
+    flex-direction: row;
+}
+.links .dropdown .right .fruit2{
+    display: flex;
+    flex-direction: row;
+}
+.links .dropdown .all .left{
+    padding-left: 40px;
+}
+.links .dropdown .all .right{
+    padding-right: 40px;
+}
+.links .dropdown .all .fruits{
+    gap: 10px;
+    margin-top: 35px;
+}
+.links .dropdown .all .fruit2{
+    gap: 10px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+.links .dropdown .left .fruits .greenbg{
+    padding: 4px;
+    width: 45px;  
+    height: 45px;
+    border-radius:50%;
+    background: #EDF5FE;
+    /* text-align: center; */
+    display: inline-block;
+}
+.links .dropdown .left .fruits .redbg{
+    padding: 4px;
+    width: 45px;  
+    height: 45px;
+    background: #FBE6EA;
+    border-radius:50%;
+    /* text-align: center; */
+    display: inline-block;
+}
+.links .dropdown .left .fruit2 .greenbg{
+    padding: 4px;
+    width: 45px;  
+    height: 45px;
+    border-radius:50%;
+    background: #EDF5FE;
+    /* text-align: center; */
+    display: inline-block;
+}
+.links .dropdown .left .fruit2 .redbg{
+    padding: 4px;
+    width: 45px;  
+    height: 45px;
+    background: #FBE6EA;
+    border-radius:50%;
+    /* text-align: center; */
+    display: inline-block;
+}
+.links .dropdown .left .fruits .greenbg img{
+    margin: 2px auto;
+    margin-left: 3px;
+}
+.links .dropdown .left .fruits .redbg img{
+    margin: 2px auto;
+    margin-left: 3px;
+}
+
+
+
+.links .dropdown .left .fruit2 .greenbg{
+    margin-top: 20px;
+    margin-right: 17px;
+}
+.links .dropdown .left .fruit2 .redbg{
+    margin-top: 20px;
+    margin-right: 17px;
+}
+.links .dropdown .left .fruit2 .greenbg img{
+    margin: 2px auto;
+    margin-left: 3px;
+}
+.links .dropdown .left .fruit2 .redbg img{
+    margin: 2px auto;
+    margin-left: 3px;
+}
+
+.links .dropdown .right .fruits .greenbg2{
+    padding: 4px;
+    width: 45px;  
+    height: 45px;
+    border-radius:50%;
+    background: #EDF5FE;
+    /* text-align: center; */
+}
+.links .dropdown .right .fruits .redbg2{
+    padding: 4px;
+    width: 45px;  
+    height: 45px;
+    background: #FBE6EA;
+    border-radius:50%;
+    /* text-align: center; */
+    display: inline-block;
+}
+
+
+.links .dropdown .right .fruit2 .greenbg2{
+    padding: 4px;
+    width: 45px;  
+    height: 45px;
+    border-radius:50%;
+    background: #EDF5FE;
+    /* text-align: center; */
+}
+.links .dropdown .right .fruit2 .redbg2{
+    padding: 4px;
+    width: 45px;  
+    height: 45px;
+    background: #FBE6EA;
+    border-radius:50%;
+    /* text-align: center; */
+    display: inline-block;
+}
+.links .dropdown .right .fruits .greenbg2 img{
+    margin: 2px auto;
+    margin-left: 3px;
+}
+.links .dropdown .right .fruits .redbg2 img{
+    margin: 2px auto;
+    margin-left: 3px;
+}
+
+
+
+.links .dropdown .right .fruit2 .redbg2 {
+    margin-top: 20px;
+    margin-right: 17px;
+}
+.links .dropdown .right .fruit2 .greenbg2{
+    margin-top: 20px;
+    margin-right: 17px;
+}
+.links .dropdown .right .fruit2 .greenbg2 img{
+    margin: 2px auto;
+    margin-left: 3px;
+}
+.links .dropdown .right .fruit2 .redbg2 img{
+    margin: 2px auto;
+    margin-left: 3px;
 }
