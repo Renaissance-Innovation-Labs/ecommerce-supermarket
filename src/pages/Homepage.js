@@ -237,6 +237,8 @@ const Homepage = () => {
             </div>
           </div>
         </div>
+        
+        <br/>
         <ColumnSlideScroll />
 
         <Footer/>

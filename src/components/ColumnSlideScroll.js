@@ -34,7 +34,7 @@ const VerticalSwiper = () => {
 
   return (
     <div>
-      <div className='top-text'>
+      <div className='client'>
       <h2>Client Testimonials</h2>
       <p>Our customer’s talk about how we offer good services, offers premium <br />
         quality, best price, 24/7 services and 100%natural product.</p>
